@@ -28,22 +28,4 @@ echo Example: %0
 echo %~1
 echo.
 
-
-
-
-
-
-
-
-
-:: Файл kernel должен иметь размер 4мБ (4 194 304 байт). Поэтому мы берем файл kernel и вычитаем
-:: его размер из 4194304 и получаем файл нужный для того чтобы получить kernel + dummy = 4194304
-
-
-:: for /f %%i in ("openwrt-ramips-mt7621-mir3g-squashfs-kernel1.bin") do ( set /a size = 4194304 - %%~zi >nul )
-:: fsutil file createnew dummy2.bin %size% >nul
-:: copy /y /b openwrt-ramips-mt7621-mir3g-squashfs-kernel1.bin + /b dummy2.bin + /b openwrt-ramips-mt7621-mir3g-squashfs-rootfs0.bin firmware.bin >nul
-:: del dummy2.bin
-
-
 pause
